@@ -96,7 +96,9 @@ public final class Cell extends JPanel {
 
   /** Amorce ou desamorce une cellule */
   public void defuse() {
-    defused = !defused;
+    if(!clicked) {
+      defused = !defused;
+    }
   }
 
   /** Fait exploser la bombe */
